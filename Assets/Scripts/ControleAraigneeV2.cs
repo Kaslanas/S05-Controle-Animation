@@ -25,7 +25,15 @@ public class ControleAraigneeV2 : MonoBehaviour
         Vector2 directionAvecVitesse = directionBase.Get<Vector2>() * _vitessePromenade;
         directionInput = new Vector3(directionAvecVitesse.x, 0f, directionAvecVitesse.y);
         _animator.SetFloat("Deplacement", directionInput.magnitude);
+        
     }
+
+    void OnAttack()
+    {
+        _animator.SetTrigger("New Trigger");
+
+    }
+    
 
     void FixedUpdate()
     {
